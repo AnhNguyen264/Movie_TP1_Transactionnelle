@@ -49,16 +49,24 @@ namespace TP2.Controllers
         // POST: ParentsControllers/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Parent parent)
         {
-            try
+            if(ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                _baseDonnees.Parents.Add(parent);
+                _baseDonnees.SaveChanges();
+                TempData[AppConstants.Success] = $"{parent.Nom} le statut a été ajouté";
+                return this.RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            //try
+            //{
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //catch
+            //{
+            //    return View();
+            //}
+            return View(parent);
         }
 
         // GET: ParentsControllers/Edit/5

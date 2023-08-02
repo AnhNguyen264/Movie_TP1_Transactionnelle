@@ -1,0 +1,53 @@
+﻿@model Enfant;
+
+@{
+    ViewData["titre"] = @Model.Nom;
+}
+
+
+<!--Section-->
+<section class="container">
+   
+
+    <div class="row detail_film">
+        <h1>@Model.Nom</h1>
+
+        <div class="col-6 col-sm-4">
+            <img src="@Model.ImageURL" alt="">
+        </div>
+        <div class="col-8 col-md-8">
+            <div class="detail_movie">
+                <div class="petit_detail">
+                    <div class="text_petit_detail">
+                        <p>@Model.GenreDeFilm</p>
+                        <p>@Model.Date</p>
+                        <p>@Model.Parent.Nom</p>
+                    </div>
+
+                    <form  asp-controller="Favoris" asp-action="AjoutUnEnfant" method="POST">
+                        <input type="hidden" name="id" value="@Model.Id" />
+                        <button type="submit"> <i class="fa-sharp fa-solid fa-heart"></i> Ajouter aux favoris</button>
+                    </form>
+
+
+                   @* <button class="button_ajout js-btn-ajout">
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                    </button>*@
+
+
+                </div>
+
+                <p>@Model.Description</p>
+
+                <div class="play_movie">
+                    <a href="https://www.youtube.com/watch?v=eoOaKN4qCKw">
+                        <i class="fa-solid fa-play"></i>
+                    </a>
+                    <span>Regardez-maintenant</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>

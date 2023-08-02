@@ -1,0 +1,232 @@
+
+* {
+    /* outline: 5px solid limegreen !important */
+}
+
+#list_movie img {
+    width: 100%;
+
+}
+section {
+    margin-bottom: 100px;
+}
+/*Form filtre*/
+
+.form_search input{
+    color: #000;
+}
+.form_search h3 {
+
+font-family: 'Balsamiq Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 24px;
+color: #FFFFFF;
+padding-top: 46px;
+padding-bottom: 74px;
+text-align: center;
+}
+.search_form, .statut_form,.vus_form {
+    display: grid;
+}
+.option_form select {
+    color:#000;
+}
+
+.option_form select option {
+    color:#000;
+}
+.vus_form input {
+    width: 80px;
+    text-align: center;
+}
+#vus1 {
+    margin-right: 20px;
+}
+
+.btn_submit {
+    display: flex;
+    justify-content: right;
+}
+.button_submit {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-top: 64px;
+    width: 224px;
+    height: 66px;
+    background: #006494;
+    border: 1px solid #B3B3B3;
+    border-radius: 4px;
+    font-family: 'Balsamiq Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.button_submit:hover {
+    background-color: #0582CA;
+color: white;
+
+}
+
+.button_reset {
+    height: 66px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-top: 64px;
+    margin-right:20px;
+}
+/*Movies*/
+.col_movie {
+    margin-bottom: 50px;
+}
+.card_movie img {
+    width: 412px;
+    height: 320px;
+    opacity: 1;
+    filter: alpha(opacity=1);
+}
+.card_movie img:hover {
+    opacity: 0.5;  filter: alpha(opacity=50);
+}
+.option_form {
+   
+    display: grid;
+}
+
+.search_details {
+    display: flex;
+    justify-content: space-around;
+}
+.line_recherche {
+    margin-top: 64px;
+}
+
+
+.tilte_nouveau {
+    margin-top: 118px;
+    margin-bottom: 86px;
+    text-align: center;
+    font-family: 'Balsamiq Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.desc_movie p {
+    text-align: justify;
+    background-color: black;
+    color: white;
+    height: 40px;
+    display: flex;
+    margin-top: 16px;
+}
+.name_movie {
+    text-align: center;
+    background-color: black;
+    color: white;
+    height: 40px;
+    font-weight:bold;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+.card_movie {
+    background-color: black;
+}
+.button_todetail {
+height: 44px;
+background-color: #006494;
+border-radius: 4px;
+align-items: right;
+color: white;
+}
+.button_todetail:hover {
+    background-color: #0582CA;
+color: white;
+
+}
+
+
+.btn_plus_detail {
+    justify-content: right;
+    display: flex;
+
+}
+
+.desc_movie {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: auto;
+}
+
+
+#carousel_banner {
+    z-index: 0;
+}
+
+#menu-burger {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: calc(114px - 16px);
+    background: white;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+    #menu-burger > .burger-item {
+        overflow: hidden;
+        color: black;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+        #menu-burger > .burger-item:not(:last-child) {
+            border-bottom: 1px solid gray;
+        }
+
+.navbar {
+    overflow: unset;
+}
+
+.burger-open {
+    animation: slideDown 0.3s ease-out;
+}
+
+.burger-closed {
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        height: 0
+    }
+
+    to {
+        height: 104px
+    }
+}
+
+@keyframes slideUp {
+    from {
+        height: 104px
+    }
+
+    to {
+        height: 0px
+    }
+}

@@ -1,0 +1,165 @@
+#list_favourite {
+    color: #fff;
+    background-color: #000;
+    margin-bottom: 30px;
+}
+table {
+    margin-top: 50px;
+}
+.details_table p {
+    color: #000;
+}
+.table th {
+    padding: 20px 7px 0;
+}
+.table td {
+    padding-top: 40px;
+}
+.title_favourite {
+   padding-top: 80px;
+   text-align: center;
+}
+.nombre_favoris {
+ padding-top: 98px;
+ font-weight: 400;
+font-size: 32px;
+}
+.info_list, .detail_table {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 24px;
+    }
+
+.info_list {
+        margin-top: 48px;
+        margin-bottom: 36px;
+}
+
+.button_detail {
+    width: 100px;
+    height: 40px;
+    background-color: #006494;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+}
+.button_detail:hover {
+    background-color: #0582CA;
+    color: white;
+
+}
+.ajout_favoris {
+    display: flex;
+}
+.ajout_favoris p {
+    padding-top: 36px;
+    padding-right: 12px;
+}
+.ajout_favoris {
+    background-color: black;
+    border: none;
+}
+.button_ajout {
+    border: none;
+    background: white;
+    padding-left: 10px;
+    font-size: 30px;
+}
+.button_ajout i{
+    color: rgb(255, 59, 59);
+    
+}
+.button_ajout i:hover {
+    color: #e2232f;
+}
+
+/* Modal - Ajout Favoris*/
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open {
+    display: flex;
+}
+.modal_container {
+    background-color: #fff;
+    width: 600px;
+    min-height: 290px;
+    text-align: center;
+    position: relative;
+    animation: modalFadeIn ease 0.6s;
+    
+}
+.modal_quetion {
+    margin-top: 62px;
+    margin-bottom: 20px;
+}
+.modal_container .modal_quetion{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+text-align: center;
+color: #000000;
+}
+.button_oui , .button_non {
+    margin-top:30px;
+    margin-left: 40px;
+    margin-right: 40px;
+align-items: center;
+width: 88px;
+height: 46px;
+border-radius: 4px;
+color: #fff;
+}
+.button_oui {
+    background: #20983A;
+}
+.button_non {
+    background: #C5121D;
+}
+.button_oui:hover {
+background: #54EE76;
+}
+.button_non:hover {
+    background: #EC343F;
+    }
+.modal_close {
+    float: right;
+    padding-right: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}  
+.modal_close i {
+    color: black;
+}
+.modal_close i:hover{
+    color: red;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}
+
+
+/*table*/
+.details_table {
+    background: black;
+    color: white;
+}

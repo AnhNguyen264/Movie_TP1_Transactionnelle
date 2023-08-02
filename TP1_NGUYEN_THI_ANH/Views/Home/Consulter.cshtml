@@ -1,0 +1,66 @@
+﻿
+@model Parent
+
+<partial name="_bannerPartiel" />
+<div class="list-statut">
+
+    <div class="container text-center">
+        <div class="row align-items-start">
+            <div class="col statut_list ">
+                <h3 class="tilte_statut">
+                    @Model.Nom
+                </h3>
+                <a href="/Home/Consulter/@Model.Id"><img src="@Model.ImageURL" alt=""></a>
+            </div>
+            <div class="col statut_content">
+                <p class="description_statut">
+                    @Model.Description
+                </p>
+                <p class="statistic_statut" style="padding-bottom: 44px;">
+                    <span class="statistic1_statut">
+                        + 3M
+                        <i class="fa-regular fa-eye"></i>
+                    </span>
+                    <span class="statistic2_statut">@Model.Enfants.Count Films</span>
+                </p>
+
+                <div class="col-sm-12 button_retour" style="margin-top:20px">
+                    <a asp-controller="GestionEnfant" asp-action="Create" class="btn button_retour_a">Ajouter un film</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row ">
+
+            @foreach (var item in Model.Enfants)
+            {
+
+                
+                    <div class="col_list  col-12 col-md-6 col-lg-3">
+                         <a href="~/enfant/detail/@(item.Id)">
+                        <img class="image_list_enfant" src="@item.ImageURL" alt="">
+                        <p>@item.Nom</p>
+                         </a>
+
+
+                    <a href="~/GestionEnfant/Delete/@(item.Id)">
+                        <button class="button_delete btn btn-danger" type="submit">Supprimer</button>
+                    </a>
+                        
+                   
+
+                    </div>
+               
+            }
+        </div>
+        <div class="row">
+        <div class="col-sm-12 button_retour" style="margin-top:20px">
+            <a asp-action="index" class="btn button_retour_a">Retour à la liste</a>
+        </div>
+    </div>
+
+    </div>
+
+</div>

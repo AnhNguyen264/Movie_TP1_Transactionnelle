@@ -1,0 +1,170 @@
+/*PC: >= 1024px
+tablet 740
+mobile <=740 */
+
+@media (min-width: 992px) {
+     #menu_ipadID  {
+        display: none;
+    }
+}
+
+/*ipad*/
+@media (min-width: 768px) and (max-width: 991px) {
+    header .header_right{
+        display: block;
+
+    }
+    .header_right ul {
+        display: none;
+    }
+  
+
+    
+    /*Recherche*/
+
+    .form_search h3 {
+
+        font-family: 'Balsamiq Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 20px;
+        color: #FFFFFF;
+        padding-top: 36px;
+        padding-bottom: 54px;
+        text-align: center;
+     }
+    
+    .search_form input {
+        width: 180px;
+         height: 50px;
+    }
+    .option_form #vedette {
+        width: 120px;
+        height: 50px;
+    }
+    .option_form {
+        margin-left: 50px;
+    }
+
+    /*Detail*/
+
+    .detail_film img {
+        width: 100%;
+    }
+}
+
+
+/*mobile*/
+@media (max-width: 767px) {
+    header .header_right{
+        display: block;
+
+    }
+    .header_right ul {
+        display: none;
+    }
+    .header_left .navbar-brand  {
+        font-size: 20px;
+    }
+    .menu_ipad {
+        padding-right: 4px;
+    }
+    .statut_item_mobile {
+        width: 100%;
+    }
+    .statut_item_mobile img{
+        width: 96%;
+    }
+    .footer_top {
+        display: inline-block;
+    }
+    .footer_text h2{
+        font-size: 16px;
+        width: 500px;
+        padding-bottom: 10px;
+    }
+    .footer_form input {
+        padding: 0 4px 0;
+        font-size: 12px;
+
+    }
+    .footer_form button {
+        padding: 0px 15px;
+        font-size: 12px;
+    }
+    .footer_bottom_up, .footer_bottom_down {
+        display: block;
+    }
+    .footer_bottom_up .contact_footer,
+    .footer_bottom_up .footer_links {
+        padding-left: 40px;
+        width: 500px;
+    }
+    .map_footer {
+        width: 100%;
+    }
+
+    /*Rechercher*/
+    .form_search h3 {
+        font-weight: 200;
+        font-size: 30px;
+        line-height: 20px;
+        padding-top: 36px;
+        padding-bottom: 44px;
+       
+    }
+    .search_details {
+        display: block;
+    }
+    .search_form ,.statut_form,.vus_form {
+        display: block;
+    }
+    #search_byword {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    #vedette {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    .option_statut {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .vus_input {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .search_details {
+        margin-left: 50px;
+    }
+    .button_submit {
+        margin-top: 34px;
+        width: 150px;
+        height: 46px;
+        
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 16px;
+    }
+       
+
+    /*Favoris*/
+
+
+    .title_favourite {
+        padding-top: 40px;
+        text-align: center;
+        font-size: 26px;
+    }
+    
+    .nombre_favoris {
+        padding-top: 40px;
+        font-weight: 100;
+        font-size: 20px;
+    }
+   
+}
+

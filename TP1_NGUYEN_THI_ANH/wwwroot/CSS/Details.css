@@ -1,0 +1,144 @@
+h1 {
+
+    margin-bottom: 56px;
+    text-align: center;
+}
+
+.detail_film {
+    margin-bottom: 60px;
+    margin-top: 36px;
+}
+.detail_film img {
+    opacity: 1;  filter: alpha(opacity=1)
+
+}
+.detail_film img:hover {
+    opacity: 0.5;  filter: alpha(opacity=50);
+
+
+}
+.petit_detail {
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.petit_detail i {
+    color: red;
+    background: black;
+    font-size: 30px;
+}
+.petit_detail button {
+    color: red;
+    background: black;
+    border: none;
+  
+}
+
+.button_ajout i{
+    color: rgb(255, 59, 59);
+}
+.button_ajout  i:hover {
+    color: #e2232f;
+}
+
+.play_movie i {
+    font-size: 100px;
+    color: #FF0000;
+    margin-right: 40px;
+}
+
+.play_movie {
+    position: relative;
+
+}
+.play_movie span {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    font-size: 30px;
+
+}
+
+/* Modal - Ajout Favoris*/
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open {
+    display: flex;
+}
+.modal_container {
+    background-color: #fff;
+    width: 600px;
+    min-height: 290px;
+    text-align: center;
+    position: relative;
+    animation: modalFadeIn ease 0.6s;
+    
+}
+.modal_quetion {
+    margin-top: 62px;
+    margin-bottom: 20px;
+}
+.modal_container .modal_quetion{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+text-align: center;
+color: #000000;
+}
+.button_oui , .button_non {
+    margin-top:30px;
+    margin-left: 40px;
+    margin-right: 40px;
+align-items: center;
+width: 88px;
+height: 46px;
+border-radius: 4px;
+color: #fff;
+}
+.button_oui {
+    background: #20983A;
+}
+.button_non {
+    background: #C5121D;
+}
+.button_oui:hover {
+background: #54EE76;
+}
+.button_non:hover {
+    background: #EC343F;
+    }
+.modal_close {
+    float: right;
+    padding-right: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}  
+.modal_close i {
+    color: black;
+}
+.modal_close i:hover{
+    color: red;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+}

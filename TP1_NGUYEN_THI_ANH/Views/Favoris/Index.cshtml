@@ -1,0 +1,82 @@
+﻿@model List<Enfant>
+@{
+    ViewData["titre"] = "Liste Favoris";
+}
+<section id="list_favourite" class="container ">
+    <h1 class="title_favourite">LISTE DES FAVORIS</h1>
+    <p class="nombre_favoris">Vous avez <span class="fw-bold">@Model.Count films</span> en favoris</p>
+    <table class="table details_table">
+        <thead>
+            <tr>
+                <th scope="col">Images</th>
+                <th scope="col">Nom de fim</th>
+                <th scope="col">Statut</th>
+                <th scope="col">Supprimer </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+             
+
+                <tr>
+                    <td scope="row"><img src="@item.ImageURL" alt=""></td>
+                    <td>
+                        @item.Nom
+                       
+                    </td>
+                    <td>
+                        @item.Parent.Nom
+
+                    </td>
+                    <td>
+                        @*<a href="~/Enfant/detail"><button class="button_detail">Plus details</button></a>*@
+
+                            <form asp-controller="Favoris" asp-action="SuprrimeUnEnfant" method="POST">
+                                <input type="hidden" name="id" value="@item.Id" />
+                                <button class="button_ajout text-black" type="submit"> <i class="fa-sharp fa-solid fa-heart"></i>Supprimer en favoris</button>
+                            </form>
+                          
+                    </td>
+                </tr>
+              
+            }
+        </tbody>
+    </table>
+</section>
+
+@*<div class="modal js-modal">
+    <div class="modal_container js-modal-container">
+        <div class="modal_close js-modal-close">
+            <i class="fa-solid fa-x"></i>
+        </div>
+        <div class="modal_quetion">
+            Est ce-que vous voulez retirer sur vos favoris?
+        </div>
+        <button class="btn button_oui">OUI</button>
+        <button class="btn button_non">NON</button>
+
+    </div>
+</div>
+<script>
+    const addBtns = document.querySelectorAll('.js-btn-ajout')
+    const modal = document.querySelector('.js-modal')
+    const modalClose = document.querySelector('.js-modal-close')
+    const modalContainer = document.querySelector('.js-modal-container')
+    function showAddFavourite() {
+        modal.classList.add('open')
+    }
+    function hideAddFavourite() {
+        modal.classList.remove('open')
+    }
+    for (const addBtn of addBtns) {
+        addBtn.addEventListener('click', showAddFavourite)
+    }
+
+    modalClose.addEventListener('click', hideAddFavourite)
+
+    modal.addEventListener('click', hideAddFavourite)
+    modalContainer.addEventListener('click', function (event) {
+        event.stopPropagation()
+    })
+</script>*@

@@ -1,0 +1,83 @@
+﻿@model PageRechercheViewModel
+@{
+    ViewData["titre"] = "Recherche un film";
+}
+
+<!-- Form -->
+
+<partial name="_bannerPartiel" />
+
+<div class="form_search">
+    <h3 class="">FILTRE</h3>
+
+    <form controller="Enfant" action="Recherche" method="post">
+        <div class="search_details">
+
+            <div class="search_form">
+                <label for="search_byword">Recherche par mots-clés</label>
+                <input type="text" id="search_byword" name="search_byword" placeholder="Entrez un mot..." value="@Model.Criteres.search_byword">
+            </div>
+
+            <div class="option_form">
+                <label for="Annee">Année</label>
+                <select name="selectAnnee" id="Annee">
+                  
+
+                    <option value="" selected="@(Model.Criteres.selectAnnee == null ? "selected" : "")">Tous les films</option>
+                    <option value="2023" selected="@(Model.Criteres.selectAnnee == 2023 ? "selected" : null)">2023</option>
+                    <option value="2022" selected="@(Model.Criteres.selectAnnee == 2022 ? "selected" : null )">2022</option>
+                    <option value="2021" selected="@(Model.Criteres.selectAnnee == 2021 ? "selected" : null)">2021</option>
+                </select>
+            </div>
+
+            <div class="statut_form">
+                <label for=""> Statute </label>
+                <div class="option_statut">
+                    <input type="checkbox" id="statut1" name="statut1" value="true" @(Model.Criteres.statut1 ? "checked" : "")>
+                    <label for="statut1"> NOUVEAUX</label> <br>
+                    <input type="checkbox" id="statut2" name="statut2" value="true" @(Model.Criteres.statut2 ? "checked" : "")>
+                    <label for="statut2">À VENIR</label> <br>
+                    <input type="checkbox" id="statut3" name="statut3" value="true" @(Model.Criteres.statut3 ? "checked" : "")>
+                    <label for="statut3"> LES PLUS VUS</label>
+                </div>
+            </div>
+
+            <div class="vus_form">
+                <label for=""> Vus </label>
+                <div class="vus_input">
+                    <input type="number" id="vus1" name="vus_min" value="@Model.Criteres.vus_min" placeholder="Min" title="la valuer minimal de vue est de 1000">
+                    <input type="number" id="vus2" name="vus_max" value="@Model.Criteres.vus_max" placeholder="Max" title="la valuer minimal de vue est de 12000">
+                </div>
+            </div>
+        </div>
+        <div class="btn_submit ">
+
+            <button class="btn btn-secondary button_reset" type="reset" value="Reset">Réinitialiser</button>
+            @*<input type="button" onclick="myFunction()" value="Reset form">*@
+            <button class="btn button_submit" type="submit">Sourmettre</button>
+        </div>
+    </form>
+
+
+
+</div>
+
+<!-- Movies -->
+<div id="list_movie">
+    <h3 class="tilte_nouveau">LISTE DES FILMS</h3>
+    <div class="movie_nouveau">
+        <div class="row">
+            @foreach (var item in Model.Resultat)
+            {
+
+                <partial name="_EnfantPartiel" for="@item" />
+            }
+             
+
+        </div>
+    </div>
+
+</div>
+@*<script>
+    document.querySelector('.button_reset').disabled = true;
+</script>*@

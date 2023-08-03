@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.EntityFrameworkCore;
 using TP2.Models;
 using TP2.Models.Data;
@@ -18,17 +19,17 @@ namespace TP2.Controllers
             _baseDonnees = baseDonnees;
         }
         // GET: ParentsControllers
-        public  ActionResult Index()
+        public async Task<  IActionResult> Index()
         {
-            List<Parent> parentsList =  _baseDonnees.Parents.ToList();
+            List<Parent> parentsList = await _baseDonnees.Parents.ToListAsync();
 
             return View(parentsList);
         }
 
         // GET: ParentsControllers/Details/5
-        public ActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
-            var parentsDetails = _baseDonnees.Enfants.Where(x => x.IdParent == id);    
+            var parentsDetails =  _baseDonnees.Enfants.Where(x => x.IdParent == id);    
             ParentVM parentVM = new()
             {
                 parent = new(),
@@ -36,79 +37,108 @@ namespace TP2.Controllers
                 EnfantCount = parentsDetails.Count()
             };
 
-            parentVM.parent = _baseDonnees.Parents.FirstOrDefault(z => z.Id == id);
+            parentVM.parent =await _baseDonnees.Parents.FirstOrDefaultAsync(z => z.Id == id);
                 return View(parentVM);
         }
 
         // GET: ParentsControllers/Create
         public ActionResult Create()
         {
+
             return View();
         }
 
         // POST: ParentsControllers/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Parent parent)
+        public async Task<IActionResult> Create(Parent parent)
         {
             if(ModelState.IsValid)
             {
-                _baseDonnees.Parents.Add(parent);
-                _baseDonnees.SaveChanges();
+               await _baseDonnees.Parents.AddAsync(parent);
+               await _baseDonnees.SaveChangesAsync();
+
                 TempData[AppConstants.Success] = $"{parent.Nom} le statut a été ajouté";
                 return this.RedirectToAction("Index");
+
+
             }
             //try
             //{
-            //    return RedirectToAction(nameof(Index));
+            //    if(parent.Id == 0) { 
+            //        parent.Id = _baseDonnees.Parents.Max(a => a.Id) + 1;
+            //        parent.Nom = parent.Nom;
+            //        parent.Description = parent.Description;
+            //        _baseDonnees.Parents.Add(parent);
+            //    _baseDonnees.SaveChanges();
+
+            //    TempData[AppConstants.Success] = $"{parent.Nom} le statut a été ajouté";
+            //        return this.RedirectToAction("Index");
+                
+            //}
             //}
             //catch
             //{
             //    return View();
+
             //}
+            return this.View(parent);
+
+
+        }
+
+        // GET: ParentsController/Edit/5
+        public async Task<IActionResult> Edit(int id)
+        {
+            Parent parent = await _baseDonnees.Parents.FindAsync(id);
             return View(parent);
         }
 
-        // GET: ParentsControllers/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: ParentsControllers/Edit/5
+        // POST: ParentsController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> Edit(Parent parent)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                _baseDonnees.Parents.Update(parent);
+               await  _baseDonnees.SaveChangesAsync();
+                TempData[AppConstants.Success] = $"Statut {parent.Nom} a été modifié";
+                return this.RedirectToAction("Index", "parents");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(parent);
+          
         }
 
         // GET: ParentsControllers/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return View();
+            Parent? parent = await _baseDonnees.Parents.FindAsync(id);
+            if(parent == null)
+            {
+                return View("NonTrouve", "Le statut demandé n'a pas été trouvé!");
+
+            }
+            return View(parent);
         }
 
         // POST: ParentsControllers/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<IActionResult> DeletePost(int id)
         {
-            try
+            Parent? parent = await _baseDonnees.Parents.FindAsync(id);
+            if(parent == null)
             {
-                return RedirectToAction(nameof(Index));
+                return View("NonTrouve", "Le statut demandé n'a pas été trouvé!");
+
             }
-            catch
-            {
-                return View();
-            }
+            _baseDonnees.Parents.Remove(parent);
+            await _baseDonnees.SaveChangesAsync();
+            TempData[AppConstants.Success] = $"Statut {parent.Nom} a été suprrimé";
+            return RedirectToAction("Index");
+
         }
     }
 }

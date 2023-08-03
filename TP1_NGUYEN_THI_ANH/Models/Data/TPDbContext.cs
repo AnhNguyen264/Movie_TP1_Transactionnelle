@@ -12,7 +12,6 @@ namespace TP2.Models.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Générer des données de départ
             modelBuilder.GenerateData();
         }
         public DbSet<Enfant> Enfants { get; set; }

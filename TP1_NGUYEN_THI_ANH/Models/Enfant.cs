@@ -16,8 +16,7 @@ namespace TP2.Models
         [ForeignKey("Parent")]
         public int IdParent { get; set; }
 
-     
-        public Parent? Parent { get; set; }
+
         public string Nom { get; set; }
         public string ImageURL { get; set; }
         public string GenreDeFilm { get; set; }
@@ -26,7 +25,11 @@ namespace TP2.Models
 
         public string Description { get; set; }
 
-      //public List<ParentEnfant> ParentEnfants { get; set; }
+
+
+        [ValidateNever]
+        public virtual Parent? Parent { get; set; }
+        //public List<ParentEnfant> ParentEnfants { get; set; }
         //public Enfant()
         //{
         //    ParentEnfants = new List<ParentEnfant>();

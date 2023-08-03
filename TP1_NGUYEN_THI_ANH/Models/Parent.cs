@@ -11,7 +11,6 @@ namespace TP2.Models
         [Key]
         public int Id { get; set; }
 
-        public List<Enfant> Enfants { get; set; }
 
         [Display(Name = "Nom de statut")]
         [Required(AllowEmptyStrings =false, ErrorMessage = "{0} doit être rempli.")]
@@ -25,13 +24,13 @@ namespace TP2.Models
         public string Description { get; set; }
 
         //public List<ParentEnfant> ParentEnfant { get; set; }
-        public Parent()
-        {
-            Enfants = new List<Enfant>();
-        }
+        //public Parent()
+        //{
+        //    Enfants = new List<Enfant>();
+        //}
 
-        //[ValidateNever]
-        //public virtual List<Enfant>? Enfant { get; set; }
+        [ValidateNever]
+        public virtual List<Enfant>? Enfants { get; set; }
 
     }
 }

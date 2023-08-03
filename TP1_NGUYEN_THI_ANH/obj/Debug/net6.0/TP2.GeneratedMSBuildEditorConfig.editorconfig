@@ -52,8 +52,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Index.cshtml]

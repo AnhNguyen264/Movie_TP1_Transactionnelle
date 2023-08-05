@@ -2669,14 +2669,6 @@ C:\Ete 2023\TP3\TP3_NGUYEN_THI_ANH\obj\Debug\net6.0\refint\TP2.dll
 C:\Ete 2023\TP3\TP3_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.pdb
 C:\Ete 2023\TP3\TP3_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.genruntimeconfig.cache
 C:\Ete 2023\TP3\TP3_NGUYEN_THI_ANH\obj\Debug\net6.0\ref\TP2.dll
-C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.csproj.AssemblyReference.cache
-C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.GeneratedMSBuildEditorConfig.editorconfig
-C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.AssemblyInfoInputs.cache
-C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.AssemblyInfo.cs
-C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.csproj.CoreCompileInputs.cache
-C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.MvcApplicationPartsAssemblyInfo.cache
-C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.RazorAssemblyInfo.cache
-C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.RazorAssemblyInfo.cs
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\bin\Debug\net6.0\appsettings.Development.json
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\bin\Debug\net6.0\appsettings.json
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\bin\Debug\net6.0\TP2.staticwebassets.runtime.json
@@ -2902,6 +2894,14 @@ C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYE
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.csproj.AssemblyReference.cache
+C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.AssemblyInfoInputs.cache
+C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.AssemblyInfo.cs
+C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.csproj.CoreCompileInputs.cache
+C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.MvcApplicationPartsAssemblyInfo.cache
+C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.RazorAssemblyInfo.cache
+C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\TP2.RazorAssemblyInfo.cs
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\staticwebassets\msbuild.TP2.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\staticwebassets\msbuild.build.TP2.props
 C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.TP2.props

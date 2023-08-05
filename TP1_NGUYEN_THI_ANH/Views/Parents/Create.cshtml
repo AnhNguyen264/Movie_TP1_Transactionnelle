@@ -13,13 +13,12 @@
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group row">
-                    <input asp-for="@Model.Id" class="form-control" hidden  />
                     <div class="col-4">
                         <label asp-for="Nom" class="control-label"></label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Nom" class="form-control" />
-                        <span asp-validation-for="@Model.Nom" class="text-danger"></span>
+                        <input type="text" asp-for="Nom" class="form-control" />
+                        <span asp-validation-for="Nom" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -33,12 +32,22 @@
                         <span asp-validation-for="@Model.Description" class="text-danger"></span>
                     </div>
                 </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="ImageURL" class="control-label"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="ImageURL" class="form-control" />
+                        <span asp-validation-for="ImageURL" class="text-danger"></span>
+                    </div>
+                </div>
+
                 <div class="form-group row  py-2">
                     <div class="col-10 offset-4 row">
                         <div class="col-5">
-                            
+
                             <button type="submit" class="btn btn-success w-100" value="Create"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;Créer</button>
-                        
+
 
                         </div>
                         <div class="col-5">
@@ -55,7 +64,7 @@
 
 @section Scripts {
     @{
-       await  Html.RenderPartialAsync("_ValidationScriptsPartial");
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 
     @*<partial name ="_ValidationScriptsPartial"   />*@

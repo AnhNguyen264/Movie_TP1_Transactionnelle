@@ -44,7 +44,6 @@ namespace TP2.Controllers
         // GET: ParentsControllers/Create
         public ActionResult Create()
         {
-
             return View();
         }
 
@@ -61,8 +60,8 @@ namespace TP2.Controllers
                 TempData[AppConstants.Success] = $"{parent.Nom} le statut a été ajouté";
                 return this.RedirectToAction("Index");
 
-
             }
+            return this.View(parent);
             //try
             //{
             //    if(parent.Id == 0) { 
@@ -74,7 +73,7 @@ namespace TP2.Controllers
 
             //    TempData[AppConstants.Success] = $"{parent.Nom} le statut a été ajouté";
             //        return this.RedirectToAction("Index");
-                
+
             //}
             //}
             //catch
@@ -82,7 +81,7 @@ namespace TP2.Controllers
             //    return View();
 
             //}
-            return this.View(parent);
+
 
 
         }
@@ -106,7 +105,6 @@ namespace TP2.Controllers
                 TempData[AppConstants.Success] = $"Statut {parent.Nom} a été modifié";
                 return this.RedirectToAction("Index", "parents");
             }
-
             return View(parent);
           
         }

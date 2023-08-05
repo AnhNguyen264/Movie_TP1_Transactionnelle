@@ -32,6 +32,7 @@ else
     app.UseStaticFiles();
 }
 
+app.UseHttpsRedirection();
 app.UseSession();
 app.UseRouting();
 app.UseEndpoints(endpoints =>

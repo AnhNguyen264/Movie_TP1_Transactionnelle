@@ -17,10 +17,10 @@ namespace TP2.Models
         [StringLength(20, MinimumLength = 2, ErrorMessage = "Le champ {0} demande un minimum de {1} et maximum de {2}.")]
         public string Nom { get; set; }
 
-
+        [Display(Name = "Image")]
         public string ImageURL { get; set; }
 
-        [StringLength(255)]
+        [StringLength(1000)]
         public string Description { get; set; }
 
         //public List<ParentEnfant> ParentEnfant { get; set; }

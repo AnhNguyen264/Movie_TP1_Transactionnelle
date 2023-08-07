@@ -177,44 +177,44 @@ namespace TP2.Controllers
             return View(enfantVM);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(EnfantVM enfantVM)
-        {
-            if (ModelState.IsValid)
-            {
-                string webRootPath = _webHostEnvironment.WebRootPath; 
-                var files = HttpContext.Request.Form.Files; 
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create(EnfantVM enfantVM)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        string webRootPath = _webHostEnvironment.WebRootPath; 
+        //        var files = HttpContext.Request.Form.Files; 
 
-                if (files.Count > 0)
-                {    
-                    string fileName = Guid.NewGuid().ToString();
-                    var uploads = Path.Combine(webRootPath, AppConstants.ImagePath);
+        //        if (files.Count > 0)
+        //        {    
+        //            string fileName = Guid.NewGuid().ToString();
+        //            var uploads = Path.Combine(webRootPath, AppConstants.ImagePath);
                   
-                    var extenstion = Path.GetExtension(files[0].FileName);
+        //            var extenstion = Path.GetExtension(files[0].FileName);
                  
-                    using (var filesStreams = new FileStream(Path.Combine(uploads, fileName + extenstion), FileMode.Create))
-                    {
-                        files[0].CopyTo(filesStreams);
-                    }
+        //            using (var filesStreams = new FileStream(Path.Combine(uploads, fileName + extenstion), FileMode.Create))
+        //            {
+        //                files[0].CopyTo(filesStreams);
+        //            }
 
-                    enfantVM.Enfant.ImageURL = fileName + extenstion;
-                }
+        //            enfantVM.Enfant.ImageURL = fileName + extenstion;
+        //        }
 
-                await _baseDonnees.Enfants.AddAsync(enfantVM.Enfant);
-                await _baseDonnees.SaveChangesAsync();
-                TempData[AppConstants.Success] = $"Film {enfantVM.Enfant.Nom} a été creé";
+        //        await _baseDonnees.Enfants.AddAsync(enfantVM.Enfant);
+        //        await _baseDonnees.SaveChangesAsync();
+        //        TempData[AppConstants.Success] = $"Film {enfantVM.Enfant.Nom} a été creé";
 
-                return this.RedirectToAction("Index");
-            }
-            enfantVM.ParentSelectList = _baseDonnees.Parents.Select(t => new SelectListItem
-            {
-                Text = t.Nom,
-                Value = t.Id.ToString()
-            }).OrderBy(t => t.Text);
+        //        return this.RedirectToAction("Index");
+        //    }
+        //    enfantVM.ParentSelectList = _baseDonnees.Parents.Select(t => new SelectListItem
+        //    {
+        //        Text = t.Nom,
+        //        Value = t.Id.ToString()
+        //    }).OrderBy(t => t.Text);
 
-            return View(enfantVM);
-        }
+        //    return View(enfantVM);
+        //}
         
 
 

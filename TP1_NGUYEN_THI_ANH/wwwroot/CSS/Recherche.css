@@ -158,7 +158,7 @@ color: white;
 
 
 .btn_plus_detail {
-    justify-content: right;
+    justify-content: space-around;
     display: flex;
 
 }

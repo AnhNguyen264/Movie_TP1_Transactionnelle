@@ -1,0 +1,27 @@
+﻿@model Enfant
+
+
+
+<div class="col_movie col-12 col-md-6 col-lg-3">
+    <div class="card_movie card ">
+        <img src="@Model.ImageURL" class="card-img-top" alt="...">
+        <p class="name_movie">@Model.Nom</p>
+        <div class="desc_movie">
+            <p>@Model.Description</p>
+        </div>
+        <div class="btn_plus_detail">
+            <a href="/enfant/detail/@Model.Id"><button class="btn button_todetail">Plus details</button></a>
+          
+
+            <a class="btn btn-info mx-2" asp-action="Edit" asp-route-Id="@Model.Id">
+                <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;Modifier
+            </a>
+            <a class="btn btn-danger mx-2" asp-action="Delete" asp-route-Id="@Model.Id">
+                <i class="fa-solid fa-trash"></i>&nbsp;&nbsp;Supprimer
+            </a>
+
+
+
+        </div>
+    </div>
+</div>

@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Ete 2023\Prg transactionnelle\New folder\Movie_TP1_Transactionnelle\TP1_NGUYEN_THI_ANH
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Enfant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Enfant/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5mYW50XERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,12 +44,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbkVuZmFudFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/GestionEnfant/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VzdGlvbkVuZmFudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Home/Consulter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25zdWx0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Parents/_EnfantPartiel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyZW50c1xfRW5mYW50UGFydGllbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Shared/NonTrouve.cshtml]
@@ -58,6 +90,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Shared/_Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Shared/_UpsertButtons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9VcHNlcnRCdXR0b25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Ete 2023/Prg transactionnelle/New folder/Movie_TP1_Transactionnelle/TP1_NGUYEN_THI_ANH/Views/Shared/_ValidationScriptsPartial.cshtml]

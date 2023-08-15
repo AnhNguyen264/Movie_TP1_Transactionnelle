@@ -1,0 +1,122 @@
+﻿@model EnfantVM
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<h4>Zombie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div class="row px-2 mx-2 backgroundWhite border">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @*SECTION DE GAUCHE*@
+                <div class="col-8">
+                    <div class="form-group p-2  row">
+                        <input asp-for="@Model.Enfant.Id" class="form-control" hidden />
+                        <input asp-for="@Model.OldImage" value="@Model.Enfant.ImageURL" class="form-control" hidden />
+
+
+                        <div class="col-3">
+                            <label asp-for="@Model.Enfant.Nom" class="control-label"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="@Model.Enfant.Nom" class="form-control" />
+                            <span asp-validation-for="@Model.Enfant.Nom" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group p-2  row">
+                        <div class="col-3">
+                            <label asp-for="@Model.Enfant.Description" class="col-form-label"></label>
+                        </div>
+                        <div class="col-9">
+                            <textarea asp-for="@Model.Enfant.Description" class="form-control summernote" style="height:300px;"></textarea>
+                            <span asp-validation-for="@Model.Enfant.Description" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-2  row">
+                        <div class="col-3">
+                            <label asp-for="@Model.Enfant.Date" class="control-label"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="@Model.Enfant.Date" class="form-control" />
+                            <span asp-validation-for="@Model.Enfant.Date" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-2  row">
+                        <div class="col-3">
+                            <label asp-for="@Model.Enfant.GenreDeFilm" class="control-label"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="@Model.Enfant.GenreDeFilm" class="form-control" />
+                            <span asp-validation-for="@Model.Enfant.GenreDeFilm" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group p-2  row">
+                        <div class="col-3">
+                            <label asp-for="@Model.Enfant.Vus" class="control-label"></label>
+                        </div>
+                        <div class="col-9">
+                            <input asp-for="@Model.Enfant.Vus" class="form-control" />
+                            <span asp-validation-for="@Model.Enfant.Vus" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group p-2  row">
+                        <div class="col-3">
+                            <label asp-for="@Model.Enfant.IdParent" class="control-label"></label>
+                        </div>
+                        <div class="col-9">
+                            <select class="form-control form-select" asp-for="@Model.Enfant.IdParent" asp-items="@Model.ParentSelectList">
+                                <option disabled selected>--Sélectionnez le statut de film--</option>
+                            </select>
+                            <span asp-validation-for="@Model.Enfant.IdParent" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group  p-2 row">
+                        <div class="col-4">
+                            <label asp-for="@Model.Enfant.ImageURL" class="control-label"></label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" asp-for="@Model.Enfant.ImageURL" class="form-control" />
+                            <span asp-validation-for="@Model.Enfant.ImageURL" class="text-danger"></span>
+                        </div>
+                    </div>
+                    @*SECTION DES BOUTONS*@
+                    <div class="form-group p-2 row">
+                        <div class="col-9 offset-3 row">
+                            <partial name="_UpsertButtons" model="@Model.Enfant.Id">
+                        </div>
+                    </div>
+                    @*FIN SECTION DES BOUTONS*@
+                </div>
+                @*FIN DE LA SECTION DE GAUCHE*@
+
+                @* SECTION DE DROITE POUR L'IMAGE'*@
+                <div class="col-4">
+                    <img class="card-img-top img-fluid d-block mx-auto mb-3 imgZombieUpsert" src="@AppConstants.ImagePath@(string.IsNullOrWhiteSpace(Model.Enfant.ImageURL) ? AppConstants.ImageGeneric : Model.Enfant.ImageURL)" />
+
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input type="file" name="files" onchange="this.nextElementSibling.style.display = 'none'" class="form-control asp-for=" @Model.Enfant.ImageURL" border-0 shadow" multiple />
+                        </div>
+                    </div>
+
+                </div>
+                @*FIN DE LA SECTION POUR L'IMAGE'*@
+
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    @*<partial name ="_ValidationScriptsPartial"   />*@
+    <script>
+        $(document).ready(function () { $('.summernote').summernote(); });
+    </script>
+ }

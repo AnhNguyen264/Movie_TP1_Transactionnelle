@@ -65,6 +65,13 @@
 <!-- Movies -->
 <div id="list_movie">
     <h3 class="tilte_nouveau">LISTE DES FILMS</h3>
+
+    <div class="col-2 text-right" style="padding-bottom: 40px">
+        <a class="btn btn-success" asp-controller="GestionEnfant" asp-action="Create">
+            <i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Créer un nouveau film
+        </a>
+    </div>
+
     <div class="movie_nouveau">
         <div class="row">
             @foreach (var item in Model.Resultat)

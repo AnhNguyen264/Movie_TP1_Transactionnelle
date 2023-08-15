@@ -1,0 +1,24 @@
+﻿@model ParentVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="padding-top:40px">Statut: @Model.parent.Nom</h1>
+<h3 style="padding-bottom:30px">Nombre de films: @Model.EnfantCount</h3>
+
+<div class="row">
+    @*  POUR CHAQUE ZOMBIE:*@
+    @foreach (var item in Model.EnfantList)
+    {
+        <partial   name="_EnfantPartiel"  model="item" />
+    }
+</div>
+@* SI AUCUN ZOMBIE ASSOCIÉ*@
+@if (Model.EnfantList.Count == 0)
+{
+    <div class="alert alert-danger">Pas de film associé à ce statut</div>
+}
+<div>
+    <a class="btn btn-secondary" asp-action="Index">Retour à la liste</a>
+</div>

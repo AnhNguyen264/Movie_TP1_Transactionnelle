@@ -10,6 +10,13 @@ ViewData["titre"] = "Acceuil";
         <div class="container text-center">
             <div class="row align-items-start">
 
+                <a asp-controller="parents" asp-action="index" class="a_btn_tous_statut" >
+                    <button class="button_tous_statut">
+                        Voir tous les statuts  
+                    <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </a>
+
                 @foreach (var item in Model)
                 {
 
@@ -31,7 +38,7 @@ ViewData["titre"] = "Acceuil";
                         <div class="voir_tout_btn">
                             <a href="/Home/Consulter/@item.Id">
                                 <button class=" btn button_voirtout_statut" style="color: #fff;">
-                                    Voir tout
+                                    Plus Détails
                                 </button>
                             </a>
                         </div>

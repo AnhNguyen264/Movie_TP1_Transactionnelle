@@ -1,0 +1,14 @@
+﻿@model int
+<div class="col">
+    @if (Model == 0)
+    {
+        <button type="submit" class="btn btn-success w-100"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;Créer</button>
+    }
+    else
+    {
+        <button type="submit" class="btn btn-info w-100"><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;Modifier</button>
+    }
+</div>
+<div class="col">
+    <a asp-controller="Enfant" asp-action="Recherche" class="btn btn-secondary w-100"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Retour à la liste</a>
+</div>

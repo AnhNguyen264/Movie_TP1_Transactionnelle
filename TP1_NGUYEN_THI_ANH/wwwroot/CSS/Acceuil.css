@@ -93,10 +93,27 @@ header nav {
     color: #fff;
 }
 /*List-Statut*/
+
+.a_btn_tous_statut {
+padding-bottom: 30px;
+text-align: right;
+}
+
+.button_tous_statut {
+  width: 140px;
+  background-color: #006494;
+  border-radius: 4px;
+  margin-bottom: 68px;
+}
+
+  .button_tous_statut:hover {
+    background-color: #0582CA;
+  }
+
+
+
 .list-statut {
-   
-    padding-top: 212px;
-   
+  padding-top: 212px;
 }
 .tilte_statut {
     padding-bottom: 96px;

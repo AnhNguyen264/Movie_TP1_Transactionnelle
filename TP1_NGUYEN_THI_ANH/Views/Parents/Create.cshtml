@@ -1,0 +1,77 @@
+﻿@model Parent
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Créer un nouveau statut</h1>
+<h4>Statut</h4>
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <div class="row p-3 ">
+            <form asp-controller="Parents" asp-action="Create" method="post">
+
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Nom" class="control-label"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="Nom" class="form-control" />
+                        <span asp-validation-for="Nom" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="@Model.Description" class="control-label"></label>
+                    </div>
+                    <div class="col-8" style="border: solid 1px white">
+                        @*<input asp-for="@Model.Description" class="form-control" />*@
+                        <textarea asp-for="@Model.Description" class="form-control summernote" style="height:300px;"></textarea>
+
+                        <span asp-validation-for="@Model.Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="ImageURL" class="control-label"></label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="ImageURL" class="form-control" />
+                        <span asp-validation-for="ImageURL" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row  py-2">
+                    <div class="col-10 offset-4 row">
+                        <div class="col-5">
+
+                            <button type="submit" class="btn btn-success w-100" value="Create"><i class="fas fa-plus-square"></i>&nbsp;&nbsp;Créer</button>
+
+
+                        </div>
+                        <div class="col-5">
+                            <a asp-action="Index" class="btn btn-secondary w-100"><i class="fa-solid fa-circle-arrow-left"></i>&nbsp;&nbsp;Retour à la liste</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    @*<partial name ="_ValidationScriptsPartial"   />*@
+    <script>
+        $(document).ready(function () { $('.summernote').summernote(); });
+    </script>
+ }
+
+
+
